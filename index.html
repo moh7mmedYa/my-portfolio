@@ -35,9 +35,24 @@
               .nav li a {
                 text-decoration: none;
                 color: var(--text-color);
+                position: relative;
+                transition: 0.3s;
               }
               .nav li a:hover {
-                color: var(--text-color);
+                color: var(--accent-color);
+              }
+              .nav li::after {
+                content: "";
+                position: absolute;
+                width: 0%;
+                height: 2px;
+                background-color: var(--accent-color);
+                left: 0;
+                bottom: -5px;
+                transition: 0.3s;
+              }
+              .nav li a:hover::after {
+                width: 100%;
               }
               .body {
                 background-color: var(--main-color);
@@ -83,8 +98,8 @@
               }
               .project {
                 text-align: center;
-                background-color:var(--section-dark);
-}
+                background-color:var(--section-dark);}
+
                 .contact {
                     text-align: center;
                     background-color:var(--main-color);
@@ -101,6 +116,7 @@
                 html {
                     scroll-behavior: smooth;
                 }
+                
 
             
 
@@ -132,7 +148,7 @@
 
     </header>
     <section id="home" class="home">
-        <img src="me.jpg.jpeg" class="profile" >
+        <img src="me.jpg.jpeg" class="profile">
         <h2>Hello,I'm Mohammed</h2>
         <p>Web Developer | Video Editor | Freelancer</p>
 
